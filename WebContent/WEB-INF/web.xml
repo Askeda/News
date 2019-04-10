@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>Manager</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>LOGIN</servlet-name>
+    <servlet-class>com.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LOGIN</servlet-name>
+    <url-pattern>/LOGIN</url-pattern>
+  </servlet-mapping>
+  
+  <filter>
+  		<filter-name>EncodeFilter</filter-name>
+  		<filter-class>com.servlet.EncodeFilter</filter-class>
+  		<init-param>
+  			<param-name>encode</param-name>
+			<param-value>UTF-8</param-value>
+  		</init-param>
+  	</filter>
+	<filter-mapping>
+		<filter-name>EncodeFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<servlet>
+	<servlet-name>Content</servlet-name>
+	<servlet-class>com.servlet.ContentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>Content</servlet-name>
+	<url-pattern>/Content</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>REG</servlet-name>
+	<servlet-class>com.servlet.RegServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>REG</servlet-name>
+	<url-pattern>/REG</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>UY</servlet-name>
+	<servlet-class>com.servlet.UserYanServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>UY</servlet-name>
+	<url-pattern>/UY</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>TOPIC</servlet-name>
+	<servlet-class>com.servlet.TopicServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>TOPIC</servlet-name>
+	<url-pattern>/TOPIC</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>TOPICM</servlet-name>
+	<servlet-class>com.servlet.TopicModify</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>TOPICM</servlet-name>
+	<url-pattern>/TOPICM</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>TOPICD</servlet-name>
+	<servlet-class>com.servlet.TopicDelete</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>TOPICD</servlet-name>
+	<url-pattern>/TOPICD</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>TOPICR</servlet-name>
+	<servlet-class>com.servlet.TopicReg</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>TOPICR</servlet-name>
+	<url-pattern>/TOPICR</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>CONTENTR</servlet-name>
+	<servlet-class>com.servlet.ContentReg</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>CONTENTR</servlet-name>
+	<url-pattern>/CONTENTR</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>CONTENTM</servlet-name>
+	<servlet-class>com.servlet.ContentModify</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>CONTENTM</servlet-name>
+	<url-pattern>/CONTENTM</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>CONTENTD</servlet-name>
+	<servlet-class>com.servlet.ContentDelete</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>CONTENTD</servlet-name>
+	<url-pattern>/CONTENTD</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>USERM</servlet-name>
+	<servlet-class>com.servlet.UserModify</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>USERM</servlet-name>
+	<url-pattern>/USERM</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>index2</servlet-name>
+	<servlet-class>com.servlet.PageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>index2</servlet-name>
+	<url-pattern>/index2</url-pattern>
+	</servlet-mapping>
+</web-app>

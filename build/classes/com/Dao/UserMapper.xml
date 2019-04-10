@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mapper namespace="com.Dao.UserMapper">
+	<resultMap type="User" id="UserList">
+		<result column="uid" property="id"></result>
+		<result column="uname" property="name"></result>
+		<result column="upwd" property="pwd"></result>
+	</resultMap>
+	<insert id="add" parametertype="User">
+	insert into user(name,pwd,id)value(#{name},#{pwd},#{id})
+	</insert>
+</mapper>
